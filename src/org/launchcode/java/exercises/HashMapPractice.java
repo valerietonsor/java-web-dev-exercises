@@ -7,27 +7,26 @@ public class HashMapPractice {
     public static void main(String[] args) {
         HashMap<Integer, String> students = new HashMap<>();
         Scanner input = new Scanner(System.in);
-        Integer studentID;
-
+        String name;
         System.out.println("Enter your IDs (or '0' to finish):");
 
         // Get student names and grades
         do {
 
-            System.out.print("ID: ");
-            studentID = input.nextInt();
+            System.out.print("Name: ");
+            name = input.nextLine();
 
-            if (!studentID.equals(0)) {
-                System.out.print("Student: ");
-                String name = input.nextLine();
+            if (!name.equals("")) {
+                System.out.print("ID: ");
+                Integer studentID = input.nextInt();
                 students.put(studentID, name);
 
                 // Read in the newline before looping back
                 input.nextLine();
             }
 
-        } while(!studentID.equals(0));
-
+        } while(!name.equals(""));
+        input.close();
         // Print class roster
         System.out.println("\nClass roster:");
 
