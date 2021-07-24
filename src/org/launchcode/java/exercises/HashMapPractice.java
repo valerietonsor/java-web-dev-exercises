@@ -8,12 +8,12 @@ public class HashMapPractice {
         HashMap<Integer, String> students = new HashMap<>();
         Scanner input = new Scanner(System.in);
         String name;
-        System.out.println("Enter your IDs (or '0' to finish):");
+
 
         // Get student names and grades
         do {
 
-            System.out.print("Name: ");
+            System.out.print("Name (or ENTER to finish): ");
             name = input.nextLine();
 
             if (!name.equals("")) {

@@ -5,14 +5,16 @@ public class Quote {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         String str;
+
         HashMap<Character, Integer> charCount = new HashMap<>();
 
         System.out.println("Enter a string...");
-        str = input.nextLine();
+        str = input.nextLine().toLowerCase();
+        String newStr = str.replaceAll( "[^a-zA-Z]", "");
 
         ArrayList<Character> charArr = new ArrayList<>();
-        for (int i = 0; i < str.length(); i++) {
-            charArr.add(str.charAt(i));
+        for (int i = 0; i < newStr.length(); i++) {
+            charArr.add(newStr.charAt(i));
         }
 
         for (int i = 0; i < charArr.size(); i++) {
