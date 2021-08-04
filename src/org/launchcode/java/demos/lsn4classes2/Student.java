@@ -34,14 +34,14 @@ public class Student {
 
 
      //TODO: Uncomment and complete the getGradeLevel method here:
-    public String getGradeLevel(int credits) {
+    public String getGradeLevel() {
         String gradeLevel;
         // Determine the grade level of the student based on numberOfCredits
-        if (credits >= 90) {
+        if (this.numberOfCredits >= 90) {
             gradeLevel = "Senior";
-        } else if (credits >= 60) {
+        } else if (this.numberOfCredits >= 60) {
             gradeLevel = "Junior";
-        } else if (credits >= 30) {
+        } else if (this.numberOfCredits >= 30) {
             gradeLevel = "Sophomore";
         } else {
             gradeLevel = "Freshman";
@@ -134,5 +134,7 @@ public class Student {
         System.out.println(sally);
         sally.addGrade(25, 3.8);
         System.out.println(sally);
+        System.out.println(sally.getGradeLevel());
+
     }
 }
