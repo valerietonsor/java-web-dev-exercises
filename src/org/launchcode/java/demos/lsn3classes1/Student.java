@@ -36,6 +36,7 @@ public class Student {
     public int getNumberOfCredits(){
         return numberOfCredits;
     }
+
 //solutions says for this one to be private ... why this & not gpa, too?
     private void setNumberOfCredits(int aNumberOfCredits){
        this.numberOfCredits = aNumberOfCredits;
