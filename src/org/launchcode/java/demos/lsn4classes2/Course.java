@@ -52,10 +52,17 @@ public class Course {
 
 
     @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (!(o instanceof Course)) return false;
-        Course course = (Course) o;
+    public boolean equals(Object toBeCompared) {
+        if (this == toBeCompared){
+            return true;
+        }
+        if (toBeCompared == null){
+            return false;
+        }
+        if (!(toBeCompared instanceof Course)){
+            return false;
+        }
+        Course course = (Course) toBeCompared;
         return Objects.equals(getTopic(), course.getTopic()) && Objects.equals(instructor, course.instructor);
     }
 

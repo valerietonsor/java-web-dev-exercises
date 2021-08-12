@@ -1,6 +1,5 @@
 package org.launchcode.java.demos.lsn4classes2;
 
-import java.util.ArrayList;
 import java.util.Objects;
 
 public class Student {
@@ -71,7 +70,7 @@ public class Student {
         return "Student{" +
                 "name='" + name + '\'' +
                 ", studentId=" + studentId +
-                ", numberOfCredits=" + numberOfCredits +
+                ", grade level = " + this.getGradeLevel() +
                 ", gpa=" + gpa +
                 '}';
     }
@@ -82,10 +81,11 @@ public class Student {
 
 
     @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (!(o instanceof Student)) return false;
-        Student student = (Student) o;
+    public boolean equals(Object toBeCompared) {
+        if (this == toBeCompared) return true;
+        if (toBeCompared == null) return false;
+        if (!(toBeCompared instanceof Student)) return false;
+        Student student = (Student) toBeCompared;
         return getStudentId() == student.getStudentId();
     }
 
@@ -126,15 +126,5 @@ public class Student {
         this.numberOfCredits = numberOfCredits;
     }
 
-    public static void main(String[] args) {
-        Student sally = new Student("Sally",1,1,4.0);
-        System.out.println("The Student class works! " + sally.getName() + " is a student!");
-        System.out.println(sally);
-        sally.addGrade(12, 3.5);
-        System.out.println(sally);
-        sally.addGrade(25, 3.8);
-        System.out.println(sally);
-        System.out.println(sally.getGradeLevel());
 
-    }
 }
