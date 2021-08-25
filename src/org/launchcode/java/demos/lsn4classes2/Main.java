@@ -15,5 +15,7 @@ public class Main {
         sally.addGrade(100, 2.4);
         System.out.println(sally);
         System.out.println(sally.getGradeLevel());
+        sally.getStudentId();
+
     }
 }
